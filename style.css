@@ -1,0 +1,325 @@
+/* RESET E BASE - Seção para resetar estilos padrão e definir bases */
+* {
+  margin: 0; /* Remove margem padrão de todos os elementos */
+  padding: 0; /* Remove padding padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui padding e borda na largura total do elemento */
+  outline: 0; /* Remove contorno ao focar elementos */
+}
+
+body {
+  font-family: "Sora", sans-serif; /* Define a fonte principal do site */
+  background-color: #06121e; /* Define cor de fundo escura */
+  color: #ffffff; /* Define cor do texto como branco */
+  width: 100%; /* Define largura total da página */
+  min-height: 100vh; /* Define altura mínima como altura total da viewport */
+  scroll-behavior: smooth; /* Adiciona rolagem suave */
+}
+
+a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: inherit; /* Herda cor do elemento pai */
+  cursor: pointer; /* Muda cursor para mãozinha ao passar por cima */
+}
+
+img, svg {
+  max-width: 100%; /* Limita largura máxima de imagens */
+  display: block; /* Remove espaço extra abaixo das imagens */
+}
+
+.container {
+  max-width: 1200px; /* Define largura máxima do container */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 20px; /* Adiciona espaço interno nas laterais */
+}
+
+/* CABEÇALHO - Seção do header do site */
+header {
+  padding: 24px 0; /* Adiciona espaço acima e abaixo */
+  animation: fadeInDown 1s ease; /* Adiciona animação de entrada */
+}
+
+.header-content {
+  display: grid; /* Usa layout grid */
+  grid-template-columns: 1fr 1fr 1fr; /* Divide em 3 colunas iguais */
+  align-items: center; /* Alinha itens verticalmente */
+  gap: 20px; /* Espaço entre elementos */
+  text-align: center; /* Centraliza texto */
+}
+
+.header-logo {
+  display: flex; /* Usa layout flexbox */
+  align-items: center; /* Alinha itens verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.08)); /* Adiciona sombra suave */
+}
+
+.header-logo img {
+  max-width: 140px; /* Define largura máxima da logo */
+  height: auto; /* Mantém proporção da imagem */
+  transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.header-logo img:hover {
+  transform: scale(1.05); /* Aumenta tamanho ao passar mouse */
+}
+
+.header-button-wrapper {
+  display: flex; /* Usa layout flexbox */
+  justify-content: center; /* Centraliza botão */
+}
+
+.header-button {
+  border: 1px solid #ffffff; /* Adiciona borda branca */
+  padding: 10px 24px; /* Adiciona espaço interno */
+  border-radius: 6px; /* Arredonda cantos */
+  font-size: 1rem; /* Define tamanho da fonte */
+  background: transparent; /* Fundo transparente */
+  color: #ffffff; /* Texto branco */
+  transition: all 0.4s ease; /* Adiciona transição suave */
+  white-space: nowrap; /* Evita quebra de linha */
+}
+
+.header-button:hover {
+  background-color: #d34040; /* Muda cor de fundo ao passar mouse */
+  border-color: #d34040; /* Muda cor da borda ao passar mouse */
+  transform: scale(1.05); /* Aumenta tamanho ao passar mouse */
+}
+
+/* FUNDO COM IMAGEM - Seção de background */
+.bg-home {
+  position: relative; /* Permite posicionamento absoluto dos filhos */
+  padding-bottom: 60px; /* Adiciona espaço inferior */
+}
+
+.bg-home::before {
+  content: ""; /* Cria pseudo-elemento */
+  position: absolute; /* Posicionamento absoluto */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Ocupa largura total */
+  height: 100%; /* Ocupa altura total */
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.6), #06121e), url(../assets/bg.svg); /* Adiciona gradiente e imagem */
+  background-size: cover; /* Cobre área total */
+  background-position: center; /* Centraliza imagem */
+  background-repeat: no-repeat; /* Não repete imagem */
+  z-index: -1; /* Coloca atrás do conteúdo */
+  opacity: 0.9; /* Define transparência */
+}
+
+/* REDES SOCIAIS - Seção de mídias sociais */
+.social-container {
+  text-align: center; /* Centraliza texto */
+  padding-top: 40px; /* Adiciona espaço superior */
+  animation: fadeIn 1.3s ease; /* Adiciona animação */
+}
+
+.social-container h1 {
+  font-size: 2.5rem; /* Define tamanho do título */
+  font-weight: 600; /* Define peso da fonte */
+  margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+.social-container h3 {
+  font-weight: 300; /* Define peso da fonte */
+  font-size: 1.2rem; /* Define tamanho da fonte */
+  margin-bottom: 24px; /* Adiciona margem inferior */
+  color: #ccc; /* Define cor do texto */
+}
+
+.header-icons {
+  display: flex; /* Usa layout flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  gap: 20px; /* Espaço entre ícones */
+  flex-wrap: wrap; /* Permite quebra de linha */
+}
+
+.header-icons a {
+  width: 56px; /* Define largura */
+  height: 56px; /* Define altura */
+  background-color: #0c1a2b; /* Define cor de fundo */
+  border-radius: 50%; /* Torna circular */
+  display: flex; /* Usa layout flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  transition: all 0.3s ease; /* Adiciona transição suave */
+  border: 2px solid transparent; /* Adiciona borda transparente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+.header-icons i {
+  font-size: 26px; /* Define tamanho do ícone */
+  color: #fff; /* Define cor do ícone */
+}
+
+.header-icons a:hover {
+  background-color: #d34040; /* Muda cor de fundo ao passar mouse */
+  transform: translateY(-6px) scale(1.1); /* Move para cima e aumenta */
+  border-color: #fff; /* Muda cor da borda */
+}
+
+/* SEÇÕES GERAIS - Estilo comum para seções */
+main section {
+  background-color: #0c1a2b; /* Define cor de fundo */
+  border-radius: 10px; /* Arredonda cantos */
+  padding: 32px; /* Adiciona espaço interno */
+  margin: 32px 0; /* Adiciona margem vertical */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+  transition: transform 0.4s ease; /* Adiciona transição */
+  animation: fadeInUp 0.8s ease; /* Adiciona animação */
+}
+
+main section:hover {
+  transform: translateY(-4px); /* Move para cima ao passar mouse */
+}
+
+main section h2 {
+  font-size: 1.5rem; /* Define tamanho do título */
+  font-weight: 600; /* Define peso da fonte */
+  margin-bottom: 16px; /* Adiciona margem inferior */
+}
+
+main section p,
+main section li {
+  font-size: 1rem; /* Define tamanho do texto */
+  line-height: 1.6; /* Define altura da linha */
+  margin-bottom: 8px; /* Adiciona margem inferior */
+  list-style-position: inside; /* Posiciona marcadores dentro */
+}
+
+main section ul {
+  padding-left: 0; /* Remove padding esquerdo */
+  list-style-type: disc; /* Define tipo de marcador */
+}
+
+/* PERFIL - Seção de perfil */
+.profile {
+  text-align: center; /* Centraliza texto */
+}
+
+.profile-photo {
+  max-width: 160px; /* Define largura máxima */
+  border-radius: 100%; /* Torna circular */
+  border: 3px solid #fff; /* Adiciona borda branca */
+  margin: 0 auto 16px; /* Centraliza e adiciona margem inferior */
+  display: block; /* Define como bloco */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1); /* Adiciona sombra */
+}
+
+.profile h1 {
+  font-size: 1.8rem; /* Define tamanho do título */
+  font-weight: 600; /* Define peso da fonte */
+  margin-bottom: 12px; /* Adiciona margem inferior */
+}
+
+.profile p {
+  font-size: 1rem; /* Define tamanho do texto */
+  color: #ccc; /* Define cor do texto */
+}
+
+/* PORTFÓLIO - Seção de portfólio */
+.portfolio-items {
+  display: flex; /* Usa layout flexbox */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  gap: 24px; /* Espaço entre os cards */
+  justify-content: center; /* Centraliza horizontalmente os cards */
+}
+
+.portfolio-item {
+  display: block; /* Permite que o link <a> envolva todo o card */
+  text-decoration: none; /* Remove sublinhado padrão de links */
+  color: inherit; /* Herda cor do texto do pai (mantém branco) */
+  flex: 1 1 280px; /* Cresce, encolhe e define largura base */
+  background-color: #06121e; /* Fundo escuro do card */
+  border: 1px solid #2f2f2f; /* Borda discreta */
+  border-radius: 8px; /* Cantos arredondados */
+  text-align: center; /* Centraliza conteúdo dentro do card */
+  padding: 16px; /* Espaçamento interno */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
+}
+
+.portfolio-item:hover {
+  transform: scale(1.03); /* Efeito de leve zoom no hover */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08); /* Sombra suave ao redor do card */
+}
+
+.portfolio-item img {
+  border-radius: 4px; /* Arredonda imagem */
+  margin-bottom: 12px; /* Espaço entre imagem e texto */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra sutil na imagem */
+}
+
+.portfolio-item p {
+  font-weight: 500; /* Peso intermediário para o nome do projeto */
+  color: #fff; /* Cor vermelha discreta */
+  margin-top: 12px; /* Espaço entre imagem e texto */
+}
+
+/* ANIMAÇÕES - Definição das animações */
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Começa invisível */
+      transform: translateY(8px); /* Começa deslocado para baixo */
+  }
+  to {
+      opacity: 1; /* Termina visível */
+      transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0; /* Começa invisível */
+      transform: translateY(20px); /* Começa deslocado para baixo */
+  }
+  to {
+      opacity: 1; /* Termina visível */
+      transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0; /* Começa invisível */
+      transform: translateY(-20px); /* Começa deslocado para cima */
+  }
+  to {
+      opacity: 1; /* Termina visível */
+      transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+/* RESPONSIVO - Adaptações para telas menores */
+@media screen and (max-width: 768px) {
+  .header-content {
+      grid-template-columns: 1fr; /* Muda para uma coluna */
+      gap: 16px; /* Reduz espaço entre elementos */
+  }
+
+  .header-logo img {
+      max-width: 120px; /* Reduz tamanho da logo */
+  }
+
+  .header-button {
+      margin-top: 8px; /* Adiciona margem superior */
+  }
+
+  .header-icons a {
+      width: 48px; /* Reduz tamanho dos ícones */
+      height: 48px; /* Reduz tamanho dos ícones */
+  }
+
+  .header-icons i {
+      font-size: 22px; /* Reduz tamanho dos ícones */
+  }
+
+  main section {
+      padding: 24px; /* Reduz padding */
+      margin: 24px 0; /* Reduz margem */
+  }
+
+  .portfolio-items {
+      flex-direction: column; /* Muda para layout vertical */
+      align-items: center; /* Centraliza itens */
+  }
+}
